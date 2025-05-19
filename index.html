@@ -7,6 +7,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://kit.fontawesome.com/a2e0f6b91b.js"
             crossorigin="anonymous"></script>
+            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link
             href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&display=swap"
             rel="stylesheet" />
@@ -86,7 +87,7 @@
         </header>
 
         <!-- Hero -->
-        <section class="bg-black text-white py-20 px-6">
+        <section class="bg-black text-white py-20 px-6 " data-aos="fade-up" data-aos-delay="300" >
             <div
                 class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
                 <div>
@@ -118,7 +119,7 @@
         </section>
 
         <!-- About -->
-        <section id="about" class="py-20 px-6 bg-gray-100">
+        <section id="about" class="py-20 px-6 bg-gray-100" data-aos="fade-up" data-aos-delay="300">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-3xl font-bold mb-6">Welcome to Fama</h2>
                 <p class="text-lg mb-4">
@@ -132,12 +133,12 @@
         </section>
 
         <!-- Services -->
-        <section id="services" class="py-20 px-6">
-            <div class="max-w-6xl mx-auto">
+        <section id="services" class="py-20 px-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="max-w-6xl mx-auto "  data-aos="fade-up" >
                 <h2 class="text-3xl font-bold text-center mb-12">Our
                     Services</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-                    <div
+                    <div data-aos-delay="300"
                         class="p-6 border rounded-xl transition-transform duration-500 hover:scale-105 hover:shadow-2xl hover:bg-black hover:text-white">
                         <i class="fas fa-cut text-3xl mb-4 text-black"></i>
                         <h3 class="text-xl font-semibold mb-2">Haircuts</h3>
@@ -161,7 +162,7 @@
         </section>
 
         <!-- Contact -->
-        <section id="contact" class="bg-black text-white py-20 px-6">
+        <section id="contact" class="bg-black text-white py-20 px-6" data-aos="fade-up">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-3xl font-bold mb-6">Visit Us</h2>
                 <p class="mb-2">500 N Bell Ave #109, Denton, TX 76209, United
@@ -178,7 +179,7 @@
         </section>
 
         <!-- Footer -->
-        <footer class="bg-gray-900 text-gray-300 py-6 text-center text-sm">
+        <footer class="bg-gray-900 text-gray-300 py-6 text-center text-sm" >
             <div class="flex justify-center gap-4 mb-2">
                 <a href="#" class="hover:text-white"><i
                         class="fab fa-facebook-f"></i></a>
@@ -189,5 +190,9 @@
             </div>
             © 2025 Fama Barber Shop & Beauty Salon. All rights reserved.
         </footer>
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
     </body>
 </html>
