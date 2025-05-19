@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <style>
       body {
         font-family: 'Inter', sans-serif;
@@ -17,6 +18,9 @@
       h1, h2, h3 {
         font-family: 'Playfair Display', serif;
       }
+
+        [x-cloak] { display: none !important; }
+      
     </style>
   </head>
   <body class="bg-white text-gray-900 scroll-smooth">
@@ -26,7 +30,22 @@
         <a href="#index.html"><h1 class="text-xl font-bold text-gray-600 hover:text-black">Fama Barber</h1></a>
         <nav class="space-x-6">
           <a href="#about" class="text-gray-600 hover:text-black">About</a>
-          <a href="#services" class="text-gray-600 hover:text-black">Services</a>
+          <div x-data="{ open: false }" class="relative inline-block text-left" @mouseenter="open = true" @mouseleave="open = false">
+            <button class="text-gray-700 hover:text-black font-medium">
+              Services
+            </button>
+          
+            <div
+              x-cloak
+              x-show="open"
+              x-transition
+              class="absolute mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50"
+            >
+              <a href="#services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Haircuts</a>
+              <a href="#services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Shaves</a>
+              <a href="#services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Styling</a>
+            </div>
+          </div>
           <a href="#contact" class="text-gray-600 hover:text-black">Contact</a>
         </nav>
         <a href="#bookanappointment"  class="text-gray-600 hover:text-black"><button>Book An Appointment</button></a>
